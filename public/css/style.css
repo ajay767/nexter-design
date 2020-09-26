@@ -319,8 +319,10 @@ footer {
       font-size: 1.6rem; }
       @media (max-width: 650px) {
         .landing__section--content p {
+          text-align: center;
           width: 95%;
-          padding: .5rem; } }
+          padding: .5rem;
+          margin: 1rem 0; } }
     .landing__section--content--btn {
       margin: 3rem;
       border-radius: 3px;

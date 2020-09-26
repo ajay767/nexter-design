@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const app = require('./config/app');
+const app = require('./app');
 
 dotenv.config({ path: './config/config.env' });
 

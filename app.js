@@ -6,12 +6,12 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
-const userRoute = require('./../routes/userRoute');
-const hotelRouter = require('./../routes/hotelRoute');
-const viewRouter = require('./../routes/viewRoute');
-const reviewRouter = require('./../routes/reviewRoute');
-const globalErrorHandler = require('./../controller/errorController');
-const AppError = require('../utils/AppError');
+const userRoute = require('./routes/userRoute');
+const hotelRouter = require('./routes/hotelRoute');
+const viewRouter = require('./routes/viewRoute');
+const reviewRouter = require('./routes/reviewRoute');
+const globalErrorHandler = require('./controller/errorController');
+const AppError = require('./utils/AppError');
 
 const app = express();
 
@@ -43,10 +43,10 @@ app.use(xss());
 app.set('view engine', 'ejs');
 
 //public directory setup (serving static files)
-app.use(express.static(path.join(__dirname, './../public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 //view directory setup
-app.set('views', path.join(__dirname, './../views'));
+app.set('views', path.join(__dirname, './views'));
 
 //routes
 app.use('/', viewRouter);
