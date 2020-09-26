@@ -1,0 +1,38 @@
+.tour__feature {
+    margin: 2rem 11rem;
+    display: grid;
+    grid-gap: 7rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    &--card {
+        width: 37rem;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, (max-content, 1fr));
+        grid-template-rows: repeat(2, max-content);
+        grid-gap: 1rem;
+        justify-self: center;
+
+        svg {
+            grid-row: 1/ span 2;
+            grid-column: 1/2;
+            height: 3.5rem;
+            width: 3.5rem;
+            fill: #d78400;
+        }
+
+        h4 {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            font-size: 1.9rem;
+            color: black;
+        }
+
+        p {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            font-size: 1.4rem;
+            color: rgb(75, 74, 74);
+        }
+    }
+}

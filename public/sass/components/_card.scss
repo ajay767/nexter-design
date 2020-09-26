@@ -1,0 +1,147 @@
+.top__tours {
+    margin: 11rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 5rem;
+
+    &--card {
+        justify-self: center;
+
+        width: 30rem;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 1px 1px 15px 0px #a8a7a7;
+        position: relative;
+        transition: all .2s ease;
+        cursor: pointer;
+
+        .tour {
+
+
+            &--cover {
+                clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+
+                img {
+                    height: 20rem;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &--details {
+                padding: 1.5rem;
+
+                h3 {
+                    text-align: center;
+                    transform: skew(0deg, -10deg);
+                    z-index: 30;
+                    position: absolute;
+                    width: max-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                    top: 4rem;
+                    left: 0;
+                    right: 0;
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    padding: 1rem 1rem;
+                    color: black;
+                    line-height: 1;
+                    -webkit-box-decoration-break: clone;
+                    box-decoration-break: clone;
+                    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 251, 251, 0.85)), to(rgba(255, 255, 255, 0.85)));
+                }
+
+                p {
+                    color: grey;
+                    font-size: 1.3rem;
+                }
+
+                &--data {
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 2px;
+
+                    &-item {
+                        align-items: center;
+                        margin: 0.5rem;
+                        display: flex;
+
+                        svg {
+                            margin: 6px;
+                            fill: #d1b785;
+                            height: 2.5rem;
+                            width: 2.5rem;
+                        }
+                    }
+                }
+            }
+
+            &--purchase {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                padding: 0rem 1.5rem 1rem;
+
+                &--rating {
+                    align-self: center;
+                    // grid-row: 1/2;
+                    // grid-column: 1/2;
+                    display: flex;
+                    font-size: 1.5rem;
+                    align-items: center;
+
+                    span {
+                        font-weight: normal;
+                        font-size: 1rem;
+                        margin-left: 3px;
+                    }
+
+                    svg {
+                        margin: 6px;
+                        fill: #e26d29;
+                        height: 2.5rem;
+                        width: 2.5rem;
+                    }
+                }
+
+                &--price {
+                    align-self: center;
+                    grid-row: 1/-1;
+                    grid-column: 1/2;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+
+                    span {
+                        font-weight: normal;
+                        font-size: 1rem;
+
+                    }
+                }
+
+                &--btn {
+                    grid-row: 1/-1;
+                    grid-column: 2/3;
+                    height: 4rem;
+                    padding: 1rem;
+                    display: block;
+                    background-color: rgb(187, 119, 11);
+                    margin: auto;
+                    width: 10.5rem;
+                    border-radius: 2px;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    color: white;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+
+        &:hover {
+            transform: translateY(-1.6rem);
+        }
+    }
+}
